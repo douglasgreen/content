@@ -20,3 +20,15 @@
 
 Custom SQL SELECT queries can be passed to the content layer to retrieve a set
 of UUIDs and their XML documents.
+
+## UUIDs
+
+UUIDs are all defined as attributes `uuid="..."`.
+
+## Deleting Content
+
+Content can only be deleted if there are no references to its UUID.
+
+## Naming Constraints
+
+Names for any schema's entities can be constrained with a regexp like `name-match="..."`.
