@@ -32,3 +32,6 @@ Content can only be deleted if there are no references to its UUID.
 ## Naming Constraints
 
 Names for any schema's entities can be constrained with a regexp like `name-match="..."`.
+
+## References
+* https://en.wikipedia.org/wiki/XML_database
