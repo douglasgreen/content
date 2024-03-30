@@ -93,3 +93,4 @@ and file system. The namespaces are registered. Enables proper cleanup.
 
 ## References
 * https://en.wikipedia.org/wiki/XML_database
+* https://xml.coverpages.org/xmlIntro.html
