@@ -86,5 +86,10 @@ and file system. The namespaces are registered. Enables proper cleanup.
 2. SQL - medium level. Table definitions in one complex layer.
 3. XML in SQL - high level. Separates concern of definition from manipulation.
 
+## Database
+
+* XML-specific databases may be best.
+* PostgreSQL has better XML support than MySQL.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
