@@ -34,6 +34,8 @@ Examples of data that doesn't fit the paradigm:
 - **Preconditions for Copying**:
   - An XML document can only be copied **after** all its associated parent and
     relationship documents (as identified by UUIDs) have been marked as copied.
+- **Date Checking**:
+  - Check date when syncing items to see if they need updating.
 
 ## Custom SQL queries
 
@@ -85,6 +87,39 @@ and file system. The namespaces are registered. Enables proper cleanup.
 1. Spreadsheet - lowest level. No table definitions.
 2. SQL - medium level. Table definitions in one complex layer.
 3. XML in SQL - high level. Separates concern of definition from manipulation.
+
+XML in SQL is more general.
+* Layered architecture where the lower layer (SQL) described how content is
+  maniuplated and upper layer (XML) describes how content is defined.Separating
+  those concerns is beneficial because it allows manipulation of content
+  separate from its definition. 
+* SQL defines UUID, unique name, schemas, schema versions, document hierarchy,
+  and command queue/log.
+* XML defines data types and relationships which are mirrored in SQL.
+
+## Antipatterns
+
+There are ways to define XML in SQL that work worse. These are design anti-patterns.
+
+* No UUID - Isn't portable between servers. Not easy to define relationships.
+* No unique name - No meaningful way to refer to content.
+* No schema - Content isn't validated. Must parse XML to identify type.
+* JSON instead of XML - Doesn't validate. No XPath queries.
+* No versioning of schemas - Hard to change data definition.
+* No queue/log - Lacks conflict management and auditability.
+* Storing too much data - Logs should not be stored here.
+* Deleting data - Use archiving instead.
+* Saving all versions - Just save significant changes.
+* No PHP direct interface - REST APIs are too slow.
+* Using database queries directly - Must use interface.
+
+## Hash
+
+Store hash of data to show it wasn't changed? Or no?
+
+## Read-Only
+
+Offer a read-only setting that doesn't allow updates? Or no?
 
 ## Database
 
