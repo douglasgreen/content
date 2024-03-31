@@ -126,6 +126,15 @@ Offer a read-only setting that doesn't allow updates? Or no?
 * XML-specific databases may be best.
 * PostgreSQL has better XML support than MySQL.
 
+## Logging
+
+Universal logging format. DB table contains:
+* Log type
+* XML of log
+
+XML has versioned schemas just like the above. DB table is partitioned or split
+into YYYY, YYYYMM, or YYYYMMDD tables.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
