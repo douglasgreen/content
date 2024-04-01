@@ -173,6 +173,11 @@ This also makes valid identifiers in most languages such as PHP.
 SimpleXML and DOMDocument are both part of PHP core. Use SimpleXML if you don't
 need validation or else use DOMDocument.
 
+DOMDocument validates with:
+* XML Schema 1.0 (preferred)
+* DTD
+* RELAX NG but not in compact syntax
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
