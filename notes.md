@@ -163,6 +163,16 @@ elements. Avoid hyphen, dot, and colon, and non-English letters.
 
 This also makes valid identifiers in most languages such as PHP.
 
+## PHP processing
+
+1. SimpleXML - DOM parser, reads and writes, supports XPath, doesn't validate
+2. DOMDocument - DOM parser, reads and writes, supports XPath, validates
+2. XMLParser - SAX parser
+3. XMLReader - Pull parser
+
+SimpleXML and DOMDocument are both part of PHP core. Use SimpleXML if you don't
+need validation.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
