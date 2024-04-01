@@ -171,7 +171,7 @@ This also makes valid identifiers in most languages such as PHP.
 3. XMLReader - Pull parser
 
 SimpleXML and DOMDocument are both part of PHP core. Use SimpleXML if you don't
-need validation.
+need validation or else use DOMDocument.
 
 ## References
 * https://en.wikipedia.org/wiki/XML_database
