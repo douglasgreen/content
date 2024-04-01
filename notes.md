@@ -148,6 +148,13 @@ in external binary table which is OK because not searched.
 4. Add diff count to change count.
 5. When change count exceeds a threshold of 20%, automatic version.
 
+## Like filesystem
+
+The unique name is like a filesystem. In fact, storing documents in a hierarchy
+is also like a filesystem. The filesystem doesn't care what's in the document
+and can copy folders. That is a separation of concerns between document storage
+and document definition just like this system.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
