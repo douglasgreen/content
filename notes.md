@@ -135,6 +135,11 @@ Universal logging format. DB table contains:
 XML has versioned schemas just like the above. DB table is partitioned or split
 into YYYY, YYYYMM, or YYYYMMDD tables.
 
+## Non-XML
+
+What about storing non-XML blobs? That would be more difficult. Could be stored
+in external binary table which is OK because not searched.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
