@@ -155,6 +155,14 @@ is also like a filesystem. The filesystem doesn't care what's in the document
 and can copy folders. That is a separation of concerns between document storage
 and document definition just like this system.
 
+## Naming elements and attributes
+
+According to [W3Schools](https://www.w3schools.com/xml/xml_elements.asp) should
+should only use word characters and underscores when naming attributes and
+elements. Avoid hyphen, dot, and colon, and non-English letters.
+
+This also makes valid identifiers in most languages such as PHP.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
