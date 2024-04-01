@@ -140,6 +140,14 @@ into YYYY, YYYYMM, or YYYYMMDD tables.
 What about storing non-XML blobs? That would be more difficult. Could be stored
 in external binary table which is OK because not searched.
 
+## Auto versioning
+
+1. Store a change count as integer.
+2. Match all words in source and target with each change.
+3. Do a diff (all old words not in new and all new words not in old).
+4. Add diff count to change count.
+5. When change count exceeds a threshold of 20%, automatic version.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
