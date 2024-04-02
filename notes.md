@@ -17,6 +17,12 @@ Examples of data that doesn't fit the paradigm:
 * Orders
 * Activty Logs
 
+## What names
+
+* UUID = Universal Unique ID, a random 64-bit key
+* UUHN = Universal Unique Hierarchical Name, the unique combination of parent ID
+  and name
+
 ## Tree Copying Algorithm
 
 - **Content Structure**: The content is structured as a tree, represented by a
@@ -93,7 +99,7 @@ XML in SQL is more general.
   maniuplated and upper layer (XML) describes how content is defined.Separating
   those concerns is beneficial because it allows manipulation of content
   separate from its definition. 
-* SQL defines UUID, unique name, schemas, schema versions, document hierarchy,
+* SQL defines UUID, UUHN, schemas, schema versions, document hierarchy,
   and command queue/log.
 * XML defines data types and relationships which are mirrored in SQL.
 
@@ -102,7 +108,7 @@ XML in SQL is more general.
 There are ways to define XML in SQL that work worse. These are design anti-patterns.
 
 * No UUID - Isn't portable between servers. Not easy to define relationships.
-* No unique name - No meaningful way to refer to content.
+* No UUHN - No meaningful way to refer to content.
 * No schema - Content isn't validated. Must parse XML to identify type.
 * JSON instead of XML - Doesn't validate. No XPath queries.
 * No versioning of schemas - Hard to change data definition.
@@ -150,10 +156,10 @@ in external binary table which is OK because not searched.
 
 ## Like filesystem
 
-The unique name is like a filesystem. In fact, storing documents in a hierarchy
-is also like a filesystem. The filesystem doesn't care what's in the document
-and can copy folders. That is a separation of concerns between document storage
-and document definition just like this system.
+The UUHN is like a filesystem. In fact, storing documents in a hierarchy is also
+like a filesystem. The filesystem doesn't care what's in the document and can
+copy folders. That is a separation of concerns between document storage and
+document definition just like this system.
 
 ## Naming elements and attributes
 
@@ -162,6 +168,16 @@ should only use word characters and underscores when naming attributes and
 elements. Avoid hyphen, dot, and colon, and non-English letters.
 
 This also makes valid identifiers in most languages such as PHP.
+
+## Unique natural keys
+
+Store a table with:
+* Schema ID
+* Key name
+* Key value
+
+The combination must be unique. That allows multiple natural unique keys per
+schema.
 
 ## PHP processing
 
@@ -177,6 +193,8 @@ DOMDocument validates with:
 * XML Schema 1.0 (preferred)
 * DTD
 * RELAX NG but not in compact syntax
+
+
 
 ## References
 * https://en.wikipedia.org/wiki/XML_database
