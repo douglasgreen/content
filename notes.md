@@ -204,6 +204,59 @@ For example, if you copy /CPA/2023/AUD to /CPA/2024/AUD, then links to
 /CPA/2023/AUD in /CPA/2023/BEC won't work. But if you use the reference ../AUD
 and copy AUD and BEC to 2024, then the relative link will still work.
 
+## Attributes
+
+Only use attributes for:
+* Unique values
+* Fixed (or maximum) length less than 64 characters
+* Matching a simple regexp or enumerated values
+
+Here are the top 20 examples of the kinds of metadata that one would commonly store in XML attributes:
+
+1. ID - A unique identifier for an element
+
+2. Type - The type or category of an element
+
+3. Name - The name of an element or attribute
+
+4. Namespace - A URI that identifies the source of an element
+
+5. Language - The language of the element's content 
+
+6. Created - The date/time the element was created
+
+7. Modified - The date/time the element was last modified
+
+8. Author - The author or creator of the element
+
+9. Version - The version number of the element
+
+10. Status - The status of the element (e.g. draft, final, etc.)
+
+11. Format - The format of the element's content (e.g. text, html, etc.)
+
+12. Source - The source of the element's content
+
+13. Rights - Copyright or usage rights for the element
+
+14. Relation - How the element relates to other elements
+
+15. Coverage - The spatial or temporal scope of the element
+
+16. Publisher - The publisher of the element
+
+17. Contributor - Contributors to the element's content
+
+18. Description - A description of the element
+
+19. Subject - The subject or topic of the element
+
+20. Datatype - The datatype of the element's content (e.g. string, numeric, etc.)
+
+The key principle is that metadata (data about data) should be stored as attributes, while the actual data itself should be stored as elements. Attributes are designed to contain data related to a specific element.
+
+For everything else, use elements.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
