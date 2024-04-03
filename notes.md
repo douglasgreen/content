@@ -194,7 +194,15 @@ DOMDocument validates with:
 * DTD
 * RELAX NG but not in compact syntax
 
+## Relative references
 
+When you copy trees between versions, UUIDs and absolute UUHNs don't point to
+the current version anymore. The solution is use relative UUHNs just like
+relative paths on a hard drive.
+
+For example, if you copy /CPA/2023/AUD to /CPA/2024/AUD, then links to
+/CPA/2023/AUD in /CPA/2023/BEC won't work. But if you use the reference ../AUD
+and copy AUD and BEC to 2024, then the relative link will still work.
 
 ## References
 * https://en.wikipedia.org/wiki/XML_database
