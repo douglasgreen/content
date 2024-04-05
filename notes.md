@@ -257,6 +257,12 @@ The key principle is that metadata (data about data) should be stored as attribu
 
 For everything else, use elements.
 
+## Archiving and purging
+
+Change the archive from a boolean `is_archived` to a nullable date field
+`archive_date`. Then delete old records that are more than a specified period
+such as one month or one year
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
