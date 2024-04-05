@@ -263,6 +263,19 @@ Change the archive from a boolean `is_archived` to a nullable date field
 `archive_date`. Then delete old records that are more than a specified period
 such as one month or one year
 
+## Constraints
+
+A question is how it is possible to replace higher level constraints like:
+
+* unique keys
+* ordered records
+
+The answer is to use higher level documents to describe them. For example, if
+the XML documents are questions to be put in a particular order, or if each
+question stem must be unique, then these fax must be described in a higher level
+parent document that references the questions as children. This document can
+provide constraints on order or uniqueness of names.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
