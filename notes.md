@@ -253,7 +253,9 @@ Here are the top 20 examples of the kinds of metadata that one would commonly st
 
 20. Datatype - The datatype of the element's content (e.g. string, numeric, etc.)
 
-The key principle is that metadata (data about data) should be stored as attributes, while the actual data itself should be stored as elements. Attributes are designed to contain data related to a specific element.
+The key principle is that metadata (data about data) should be stored as
+attributes, while the actual data itself should be stored as elements.
+Attributes are designed to contain data related to a specific element.
 
 For everything else, use elements.
 
@@ -275,6 +277,12 @@ the XML documents are questions to be put in a particular order, or if each
 question stem must be unique, then these fax must be described in a higher level
 parent document that references the questions as children. This document can
 provide constraints on order or uniqueness of names.
+
+## Import/export
+
+Each blob of XML in a tree is identified by its UUID. So it's possible to export
+a subtree to a file then import that same subtree to a different database
+server.
 
 ## References
 * https://en.wikipedia.org/wiki/XML_database
