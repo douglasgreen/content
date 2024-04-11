@@ -287,3 +287,4 @@ server.
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
+* https://unkey.dev/blog/uuid-ux
