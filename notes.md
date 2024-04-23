@@ -284,6 +284,11 @@ Each blob of XML in a tree is identified by its UUID. So it's possible to export
 a subtree to a file then import that same subtree to a different database
 server.
 
+## No copy
+
+Allow subnodes to me marked as "no copy" so they won't be copied as part of a
+subtree, only directly.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
