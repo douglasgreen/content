@@ -310,6 +310,7 @@ tags. Or is this redundant to "tag documents"?
 - Can't do many-to-many mappings.
 - Doesn't handle ubiquitous concerns (UUIDs, transactions, etc.)
 - Can't easily relate data on different servers.
+- Incremental IDs are predictable.
 
 ## References
 * https://en.wikipedia.org/wiki/XML_database
