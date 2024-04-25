@@ -289,6 +289,12 @@ server.
 Allow subnodes to me marked as "no copy" so they won't be copied as part of a
 subtree, only directly.
 
+## Tagging
+
+In addition to UUID and UUHN, consider making a Tags table with unique-named
+tags. Then a TagMaps table where each piece of content can have one or more
+tags. Or is this redundant to "tag documents"?
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
