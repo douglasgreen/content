@@ -295,6 +295,22 @@ In addition to UUID and UUHN, consider making a Tags table with unique-named
 tags. Then a TagMaps table where each piece of content can have one or more
 tags. Or is this redundant to "tag documents"?
 
+## Criticism of database
+
+- Everything is a special case (data is not uniform).
+- You have to define data in order to store it (no separation of concerns).
+- Complexity of triggers, etc.
+- Error-prone and irreversible.
+- No activity logging.
+- Too complex to serve as intermediary between apps.
+- Tables pretending to be hierarchies.
+- No versioning.
+- Not flexibly.
+- IDs are relative.
+- Can't do many-to-many mappings.
+- Doesn't handle ubiquitous concerns (UUIDs, transactions, etc.)
+- Can't easily relate data on different servers.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
