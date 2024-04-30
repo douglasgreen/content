@@ -312,6 +312,19 @@ tags. Or is this redundant to "tag documents"?
 - Can't easily relate data on different servers.
 - Incremental IDs are predictable.
 
+## NoSQL
+
+MongoDB does XML/JSON schemas.
+
+## Replication
+
+A single content server could host all content. But for efficieny, it could be
+synchronized to several replication databases/hosts. Every hour, the content
+could be resynchronized. All active content could be synchronized by comparing
+the update date.
+
+Content could be limited to just one course.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
