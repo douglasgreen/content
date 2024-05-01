@@ -325,6 +325,11 @@ the update date.
 
 Content could be limited to just one course.
 
+## Traceability
+
+Each unit of content refers to the logged command that created it. Updates would
+require a separate table for many-to-many.
+
 ## References
 * https://en.wikipedia.org/wiki/XML_database
 * https://xml.coverpages.org/xmlIntro.html
