@@ -1,11 +1,24 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Content;
 
-interface ContentRepositoryInterface {
-    public function createContent(string $id, ?string $parentId, string $name, int $schemaVersionId, string $contentXml): void;
-    public function getContentById(string $id): ?array;
-    public function updateContent(string $id, array $data): void;
-    public function archiveContent(string $id): void;
+interface ContentRepositoryInterface
+{
+    public function createContent(
+        string $contentId,
+        ?string $parentId,
+        string $name,
+        int $schemaVersionId,
+        string $contentXml
+    ): void;
+
+    public function getContentById(string $contentId): ?array;
+
+    public function updateContent(string $contentId, array $data): void;
+
+    public function archiveContent(string $contentId): void;
+
     public function getContentByParentId(string $parentId): array;
 }

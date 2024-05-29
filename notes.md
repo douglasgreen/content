@@ -1,47 +1,54 @@
 ## When to Use
 
 Use for data that is:
-* Hierarchical
-* Closed set
+
+-   Hierarchical
+-   Closed set
 
 Examples of data that fits the paradigm:
-* Content
-* Products
+
+-   Content
+-   Products
 
 Don't use for data that is:
-* Non-hierarchical
-* Open set
+
+-   Non-hierarchical
+-   Open set
 
 Examples of data that doesn't fit the paradigm:
-* Customers
-* Orders
-* Activty Logs
+
+-   Customers
+-   Orders
+-   Activty Logs
 
 ## What names
 
-* UUID = Universal Unique ID, a random 64-bit key
-* UUHN = Universal Unique Hierarchical Name, the unique combination of parent ID
-  and name
+-   UUID = Universal Unique ID, a random 64-bit key
+-   UUHN = Universal Unique Hierarchical Name, the unique combination of parent
+    ID and name
 
 ## Tree Copying Algorithm
 
-- **Content Structure**: The content is structured as a tree, represented by a
-  hierarchy of XML documents.
-- **XML Document Details**:
-  - Each XML document contains **attributes**, some of which may include **UUIDs**.
-  - These UUIDs serve as pointers to other XML documents, establishing
-    **relationships** between them.
-- **Objective**: Develop an algorithm to copy entire trees of XML documents
-  along with their interconnecting relationships.
-- **Copying Methodology**:
-  - The copying process involves transferring the documents **one group at a time**.
-  - Each XML document encompasses a list of UUIDs that reference both its
-    **parent document** and any **related documents**.
-- **Preconditions for Copying**:
-  - An XML document can only be copied **after** all its associated parent and
-    relationship documents (as identified by UUIDs) have been marked as copied.
-- **Date Checking**:
-  - Check date when syncing items to see if they need updating.
+-   **Content Structure**: The content is structured as a tree, represented by a
+    hierarchy of XML documents.
+-   **XML Document Details**:
+    -   Each XML document contains **attributes**, some of which may include
+        **UUIDs**.
+    -   These UUIDs serve as pointers to other XML documents, establishing
+        **relationships** between them.
+-   **Objective**: Develop an algorithm to copy entire trees of XML documents
+    along with their interconnecting relationships.
+-   **Copying Methodology**:
+    -   The copying process involves transferring the documents **one group at a
+        time**.
+    -   Each XML document encompasses a list of UUIDs that reference both its
+        **parent document** and any **related documents**.
+-   **Preconditions for Copying**:
+    -   An XML document can only be copied **after** all its associated parent
+        and relationship documents (as identified by UUIDs) have been marked as
+        copied.
+-   **Date Checking**:
+    -   Check date when syncing items to see if they need updating.
 
 ## Custom SQL queries
 
@@ -58,7 +65,8 @@ Content can only be deleted if there are no references to its UUID.
 
 ## Naming Constraints
 
-Names for any schema's entities can be constrained with a regexp like `name-match="..."`.
+Names for any schema's entities can be constrained with a regexp like
+`name-match="..."`.
 
 ## Object-Relational Mapping
 
@@ -95,29 +103,31 @@ and file system. The namespaces are registered. Enables proper cleanup.
 3. XML in SQL - high level. Separates concern of definition from manipulation.
 
 XML in SQL is more general.
-* Layered architecture where the lower layer (SQL) described how content is
-  maniuplated and upper layer (XML) describes how content is defined.Separating
-  those concerns is beneficial because it allows manipulation of content
-  separate from its definition. 
-* SQL defines UUID, UUHN, schemas, schema versions, document hierarchy,
-  and command queue/log.
-* XML defines data types and relationships which are mirrored in SQL.
+
+-   Layered architecture where the lower layer (SQL) described how content is
+    maniuplated and upper layer (XML) describes how content is
+    defined.Separating those concerns is beneficial because it allows
+    manipulation of content separate from its definition.
+-   SQL defines UUID, UUHN, schemas, schema versions, document hierarchy, and
+    command queue/log.
+-   XML defines data types and relationships which are mirrored in SQL.
 
 ## Antipatterns
 
-There are ways to define XML in SQL that work worse. These are design anti-patterns.
+There are ways to define XML in SQL that work worse. These are design
+anti-patterns.
 
-* No UUID - Isn't portable between servers. Not easy to define relationships.
-* No UUHN - No meaningful way to refer to content.
-* No schema - Content isn't validated. Must parse XML to identify type.
-* JSON instead of XML - Doesn't validate. No XPath queries.
-* No versioning of schemas - Hard to change data definition.
-* No queue/log - Lacks conflict management and auditability.
-* Storing too much data - Logs should not be stored here.
-* Deleting data - Use archiving instead.
-* Saving all versions - Just save significant changes.
-* No PHP direct interface - REST APIs are too slow.
-* Using database queries directly - Must use interface.
+-   No UUID - Isn't portable between servers. Not easy to define relationships.
+-   No UUHN - No meaningful way to refer to content.
+-   No schema - Content isn't validated. Must parse XML to identify type.
+-   JSON instead of XML - Doesn't validate. No XPath queries.
+-   No versioning of schemas - Hard to change data definition.
+-   No queue/log - Lacks conflict management and auditability.
+-   Storing too much data - Logs should not be stored here.
+-   Deleting data - Use archiving instead.
+-   Saving all versions - Just save significant changes.
+-   No PHP direct interface - REST APIs are too slow.
+-   Using database queries directly - Must use interface.
 
 ## Hash
 
@@ -129,14 +139,15 @@ Offer a read-only setting that doesn't allow updates? Or no?
 
 ## Database
 
-* XML-specific databases may be best.
-* PostgreSQL has better XML support than MySQL.
+-   XML-specific databases may be best.
+-   PostgreSQL has better XML support than MySQL.
 
 ## Logging
 
 Universal logging format. DB table contains:
-* Log type
-* XML of log
+
+-   Log type
+-   XML of log
 
 XML has versioned schemas just like the above. DB table is partitioned or split
 into YYYY, YYYYMM, or YYYYMMDD tables.
@@ -172,9 +183,10 @@ This also makes valid identifiers in most languages such as PHP.
 ## Unique natural keys
 
 Store a table with:
-* Schema ID
-* Key name
-* Key value
+
+-   Schema ID
+-   Key name
+-   Key value
 
 The combination must be unique. That allows multiple natural unique keys per
 schema.
@@ -183,16 +195,17 @@ schema.
 
 1. SimpleXML - DOM parser, reads and writes, supports XPath, doesn't validate
 2. DOMDocument - DOM parser, reads and writes, supports XPath, validates
-2. XMLParser - SAX parser
-3. XMLReader - Pull parser
+3. XMLParser - SAX parser
+4. XMLReader - Pull parser
 
 SimpleXML and DOMDocument are both part of PHP core. Use SimpleXML if you don't
 need validation or else use DOMDocument.
 
 DOMDocument validates with:
-* XML Schema 1.0 (preferred)
-* DTD
-* RELAX NG but not in compact syntax
+
+-   XML Schema 1.0 (preferred)
+-   DTD
+-   RELAX NG but not in compact syntax
 
 ## Relative references
 
@@ -207,11 +220,13 @@ and copy AUD and BEC to 2024, then the relative link will still work.
 ## Attributes
 
 Only use attributes for:
-* Unique values
-* Fixed (or maximum) length less than 64 characters
-* Matching a simple regexp or enumerated values
 
-Here are the top 20 examples of the kinds of metadata that one would commonly store in XML attributes:
+-   Unique values
+-   Fixed (or maximum) length less than 64 characters
+-   Matching a simple regexp or enumerated values
+
+Here are the top 20 examples of the kinds of metadata that one would commonly
+store in XML attributes:
 
 1. ID - A unique identifier for an element
 
@@ -221,7 +236,7 @@ Here are the top 20 examples of the kinds of metadata that one would commonly st
 
 4. Namespace - A URI that identifies the source of an element
 
-5. Language - The language of the element's content 
+5. Language - The language of the element's content
 
 6. Created - The date/time the element was created
 
@@ -251,7 +266,8 @@ Here are the top 20 examples of the kinds of metadata that one would commonly st
 
 19. Subject - The subject or topic of the element
 
-20. Datatype - The datatype of the element's content (e.g. string, numeric, etc.)
+20. Datatype - The datatype of the element's content (e.g. string, numeric,
+    etc.)
 
 The key principle is that metadata (data about data) should be stored as
 attributes, while the actual data itself should be stored as elements.
@@ -269,8 +285,8 @@ such as one month or one year
 
 A question is how it is possible to replace higher level constraints like:
 
-* unique keys
-* ordered records
+-   unique keys
+-   ordered records
 
 The answer is to use higher level documents to describe them. For example, if
 the XML documents are questions to be put in a particular order, or if each
@@ -297,20 +313,20 @@ tags. Or is this redundant to "tag documents"?
 
 ## Criticism of database
 
-- Everything is a special case (data is not uniform).
-- You have to define data in order to store it (no separation of concerns).
-- Complexity of triggers, etc.
-- Error-prone and irreversible.
-- No activity logging.
-- Too complex to serve as intermediary between apps.
-- Tables pretending to be hierarchies.
-- No versioning.
-- Not flexibly.
-- IDs are relative.
-- Can't do many-to-many mappings.
-- Doesn't handle ubiquitous concerns (UUIDs, transactions, etc.)
-- Can't easily relate data on different servers.
-- Incremental IDs are predictable.
+-   Everything is a special case (data is not uniform).
+-   You have to define data in order to store it (no separation of concerns).
+-   Complexity of triggers, etc.
+-   Error-prone and irreversible.
+-   No activity logging.
+-   Too complex to serve as intermediary between apps.
+-   Tables pretending to be hierarchies.
+-   No versioning.
+-   Not flexibly.
+-   IDs are relative.
+-   Can't do many-to-many mappings.
+-   Doesn't handle ubiquitous concerns (UUIDs, transactions, etc.)
+-   Can't easily relate data on different servers.
+-   Incremental IDs are predictable.
 
 ## NoSQL
 
@@ -331,6 +347,7 @@ Each unit of content refers to the logged command that created it. Updates would
 require a separate table for many-to-many.
 
 ## References
-* https://en.wikipedia.org/wiki/XML_database
-* https://xml.coverpages.org/xmlIntro.html
-* https://unkey.dev/blog/uuid-ux
+
+-   https://en.wikipedia.org/wiki/XML_database
+-   https://xml.coverpages.org/xmlIntro.html
+-   https://unkey.dev/blog/uuid-ux
