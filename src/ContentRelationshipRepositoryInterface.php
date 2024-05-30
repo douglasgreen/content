@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Content;
+namespace DouglasGreen\Content;
 
 interface ContentRelationshipRepositoryInterface
 {

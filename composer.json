@@ -3,16 +3,51 @@
     "description": "XML content abstraction layer",
     "license": "MIT",
     "type": "project",
+    "homepage": "https://github.com/douglasgreen/content",
+    "authors": [
+        {
+            "name": "Douglas Green",
+            "email": "douglas@nurd.site",
+            "homepage": "https://nurd.site/",
+            "role": "Developer"
+        }
+    ],
+    "keywords": [
+        "centralized storage",
+        "command queue",
+        "content API",
+        "content integration",
+        "content management",
+        "content proofing",
+        "content relationships",
+        "content staging",
+        "content synchronization",
+        "content transformation",
+        "cross-course management",
+        "data abstraction",
+        "data integrity",
+        "data versioning",
+        "MySQL",
+        "PHP",
+        "REST API",
+        "schema versioning",
+        "structured content management",
+        "UUID",
+        "XML",
+        "XML blob",
+        "XML schema",
+        "XML validation"
+    ],
     "autoload": {
         "files": [
             "src/Exceptions.php"
         ],
         "psr-4": {
-            "Content\\": "src/"
+            "DouglasGreen\\Content\\": "src/"
         }
     },
     "require": {
-        "php": ">=8.1.0"
+        "php": ">=8.1"
     },
     "require-dev": {
         "douglasgreen/optparser": "^0.7",
