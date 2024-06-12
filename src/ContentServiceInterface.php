@@ -6,7 +6,12 @@ namespace DouglasGreen\Content;
 
 interface ContentServiceInterface
 {
-    public function createContent(string $name, ?string $parentId, int $schemaId, string $contentXml): string;
+    public function createContent(
+        string $name,
+        ?string $parentId,
+        int $schemaId,
+        string $contentXml,
+    ): string;
 
     public function getContentById(string $contentId): ?array;
 
@@ -16,9 +21,16 @@ interface ContentServiceInterface
 
     public function getContentByParentId(string $parentId): array;
 
-    public function createContentRelationship(string $sourceContentId, string $targetContentId): int;
+    public function createContentRelationship(
+        string $sourceContentId,
+        string $targetContentId,
+    ): int;
 
-    public function getContentRelationshipsBySourceId(string $sourceContentId): array;
+    public function getContentRelationshipsBySourceId(
+        string $sourceContentId,
+    ): array;
 
-    public function getContentRelationshipsByTargetId(string $targetContentId): array;
+    public function getContentRelationshipsByTargetId(
+        string $targetContentId,
+    ): array;
 }

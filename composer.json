@@ -39,18 +39,22 @@
         "XML validation"
     ],
     "autoload": {
-        "files": [
-            "src/Exceptions.php"
-        ],
         "psr-4": {
             "DouglasGreen\\Content\\": "src/"
         }
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/douglasgreen/config-setup"
+        }
+    ],
     "require": {
         "php": ">=8.1"
     },
     "require-dev": {
-        "douglasgreen/optparser": "^0.7",
+        "douglasgreen/config-setup": "dev-main",
+        "douglasgreen/optparser": "dev-main",
         "phpmd/phpmd": "^2.15",
         "phpstan/phpstan": "^1.10",
         "rector/rector": "^1.0",
@@ -66,6 +70,12 @@
         "lint:fix": [
             "ecs --fix",
             "rector"
+        ],
+        "post-install-cmd": [
+            "vendor/douglasgreen/config-setup/bin/copy_files.php --wrap"
+        ],
+        "post-update-cmd": [
+            "vendor/douglasgreen/config-setup/bin/copy_files.php --wrap"
         ]
     }
 }

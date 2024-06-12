@@ -11,7 +11,7 @@ interface ContentRepositoryInterface
         ?string $parentId,
         string $name,
         int $schemaVersionId,
-        string $contentXml
+        string $contentXml,
     ): void;
 
     public function getContentById(string $contentId): ?array;

@@ -176,54 +176,94 @@ languages and servers.
 ### PHP Interfaces
 
 ```php
-interface SchemaRepositoryInterface {
+interface SchemaRepositoryInterface
+{
     public function createSchema(string $name): int;
     public function getSchemaByName(string $name): ?array;
 }
 
-interface SchemaVersionRepositoryInterface {
-    public function createSchemaVersion(int $schemaId, int $version, string $xmlContent): int;
+interface SchemaVersionRepositoryInterface
+{
+    public function createSchemaVersion(
+        int $schemaId,
+        int $version,
+        string $xmlContent,
+    ): int;
     public function getSchemaVersionById(int $id): ?array;
     public function getLatestSchemaVersionBySchemaId(int $schemaId): ?array;
 }
 
-interface ContentRepositoryInterface {
-    public function createContent(string $id, ?string $parentId, string $name, int $schemaVersionId, string $contentXml): void;
+interface ContentRepositoryInterface
+{
+    public function createContent(
+        string $id,
+        ?string $parentId,
+        string $name,
+        int $schemaVersionId,
+        string $contentXml,
+    ): void;
     public function getContentById(string $id): ?array;
     public function updateContent(string $id, array $data): void;
     public function archiveContent(string $id): void;
     public function getContentByParentId(string $parentId): array;
 }
 
-interface ContentRelationshipRepositoryInterface {
-    public function createContentRelationship(string $sourceContentId, string $targetContentId): int;
-    public function getContentRelationshipsBySourceId(string $sourceContentId): array;
-    public function getContentRelationshipsByTargetId(string $targetContentId): array;
+interface ContentRelationshipRepositoryInterface
+{
+    public function createContentRelationship(
+        string $sourceContentId,
+        string $targetContentId,
+    ): int;
+    public function getContentRelationshipsBySourceId(
+        string $sourceContentId,
+    ): array;
+    public function getContentRelationshipsByTargetId(
+        string $targetContentId,
+    ): array;
 }
 
-interface ContentValidatorInterface {
-    public function validateContent(string $contentXml, string $schemaXml): bool;
+interface ContentValidatorInterface
+{
+    public function validateContent(
+        string $contentXml,
+        string $schemaXml,
+    ): bool;
 }
 
-interface ContentServiceInterface {
-    public function createContent(string $name, ?string $parentId, int $schemaId, string $contentXml): string;
+interface ContentServiceInterface
+{
+    public function createContent(
+        string $name,
+        ?string $parentId,
+        int $schemaId,
+        string $contentXml,
+    ): string;
     public function getContentById(string $id): ?array;
     public function updateContent(string $id, array $data): void;
     public function archiveContent(string $id): void;
     public function getContentByParentId(string $parentId): array;
-    public function createContentRelationship(string $sourceContentId, string $targetContentId): int;
-    public function getContentRelationshipsBySourceId(string $sourceContentId): array;
-    public function getContentRelationshipsByTargetId(string $targetContentId): array;
+    public function createContentRelationship(
+        string $sourceContentId,
+        string $targetContentId,
+    ): int;
+    public function getContentRelationshipsBySourceId(
+        string $sourceContentId,
+    ): array;
+    public function getContentRelationshipsByTargetId(
+        string $targetContentId,
+    ): array;
 }
 
-interface CommandQueueRepositoryInterface {
+interface CommandQueueRepositoryInterface
+{
     public function createCommand(string $commandType, array $commandData): int;
     public function getCommandById(int $id): ?array;
     public function updateCommandStatus(int $id, string $status): void;
     public function getOldestPendingCommand(): ?array;
 }
 
-interface CommandProcessorInterface {
+interface CommandProcessorInterface
+{
     public function processCommand(array $command): void;
 }
 ```
