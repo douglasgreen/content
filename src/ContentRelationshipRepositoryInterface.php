@@ -11,11 +11,7 @@ interface ContentRelationshipRepositoryInterface
         string $targetContentId,
     ): int;
 
-    public function getContentRelationshipsBySourceId(
-        string $sourceContentId,
-    ): array;
+    public function getContentRelationshipsBySourceId(string $sourceContentId): array;
 
-    public function getContentRelationshipsByTargetId(
-        string $targetContentId,
-    ): array;
+    public function getContentRelationshipsByTargetId(string $targetContentId): array;
 }

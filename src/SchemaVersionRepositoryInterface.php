@@ -6,11 +6,7 @@ namespace DouglasGreen\Content;
 
 interface SchemaVersionRepositoryInterface
 {
-    public function createSchemaVersion(
-        int $schemaId,
-        int $version,
-        string $xmlContent,
-    ): int;
+    public function createSchemaVersion(int $schemaId, int $version, string $xmlContent): int;
 
     public function getSchemaVersionById(int $versionId): ?array;
 
