@@ -150,12 +150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglasgreen/config-setup.git",
-                "reference": "92ce6438e4b93e1a95d0c63f2de926bc6c5225b9"
+                "reference": "2e9791dc3e91485795061e23ca2de64aa35bb20c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglasgreen/config-setup/zipball/92ce6438e4b93e1a95d0c63f2de926bc6c5225b9",
-                "reference": "92ce6438e4b93e1a95d0c63f2de926bc6c5225b9",
+                "url": "https://api.github.com/repos/douglasgreen/config-setup/zipball/2e9791dc3e91485795061e23ca2de64aa35bb20c",
+                "reference": "2e9791dc3e91485795061e23ca2de64aa35bb20c",
                 "shasum": ""
             },
             "require": {
@@ -220,7 +220,7 @@
                 "source": "https://github.com/douglasgreen/config-setup/tree/main",
                 "issues": "https://github.com/douglasgreen/config-setup/issues"
             },
-            "time": "2024-06-13T19:22:14+00:00"
+            "time": "2024-06-15T14:29:41+00:00"
         },
         {
             "name": "douglasgreen/optparser",
@@ -228,12 +228,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglasgreen/optparser.git",
-                "reference": "c9138f0074d398cb48721c84e4a6839b51971547"
+                "reference": "d1e4de48b5a4024bd081d4b60b783af11b4d3b1a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglasgreen/optparser/zipball/c9138f0074d398cb48721c84e4a6839b51971547",
-                "reference": "c9138f0074d398cb48721c84e4a6839b51971547",
+                "url": "https://api.github.com/repos/douglasgreen/optparser/zipball/d1e4de48b5a4024bd081d4b60b783af11b4d3b1a",
+                "reference": "d1e4de48b5a4024bd081d4b60b783af11b4d3b1a",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "issues": "https://github.com/douglasgreen/optparser/issues",
                 "source": "https://github.com/douglasgreen/optparser/tree/main"
             },
-            "time": "2024-06-13T19:24:33+00:00"
+            "time": "2024-06-14T09:13:35+00:00"
         },
         {
             "name": "pdepend/pdepend",
