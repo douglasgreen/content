@@ -150,12 +150,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglasgreen/config-setup.git",
-                "reference": "6873fb332b502d3c1ed565ed6059b4fb4d10a52b"
+                "reference": "f806e9741cc601772798cdc935118543c982a967"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglasgreen/config-setup/zipball/6873fb332b502d3c1ed565ed6059b4fb4d10a52b",
-                "reference": "6873fb332b502d3c1ed565ed6059b4fb4d10a52b",
+                "url": "https://api.github.com/repos/douglasgreen/config-setup/zipball/f806e9741cc601772798cdc935118543c982a967",
+                "reference": "f806e9741cc601772798cdc935118543c982a967",
                 "shasum": ""
             },
             "require": {
@@ -165,7 +165,6 @@
                 "php": ">=8.1"
             },
             "require-dev": {
-                "phpmd/phpmd": "^2.15",
                 "phpstan/phpstan": "^1.11",
                 "rector/rector": "^1.1",
                 "symplify/easy-coding-standard": "^12.3"
@@ -184,7 +183,6 @@
                 "lint": [
                     "ecs",
                     "php-linter",
-                    "phpmd --cache --cache-file var/cache/phpmd/cache.php . text phpmd.xml",
                     "phpstan analyse",
                     "rector --dry-run"
                 ],
@@ -226,7 +224,7 @@
                 "source": "https://github.com/douglasgreen/config-setup/tree/main",
                 "issues": "https://github.com/douglasgreen/config-setup/issues"
             },
-            "time": "2024-06-26T13:56:11+00:00"
+            "time": "2024-07-01T12:04:06+00:00"
         },
         {
             "name": "douglasgreen/optparser",
@@ -234,12 +232,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglasgreen/optparser.git",
-                "reference": "d2bd5e2a7a2c89b50ecba2fea56785f1bef0f027"
+                "reference": "bb4aa9f4ec060f5c213945e0a9a6907ab541bb2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglasgreen/optparser/zipball/d2bd5e2a7a2c89b50ecba2fea56785f1bef0f027",
-                "reference": "d2bd5e2a7a2c89b50ecba2fea56785f1bef0f027",
+                "url": "https://api.github.com/repos/douglasgreen/optparser/zipball/bb4aa9f4ec060f5c213945e0a9a6907ab541bb2d",
+                "reference": "bb4aa9f4ec060f5c213945e0a9a6907ab541bb2d",
                 "shasum": ""
             },
             "require": {
@@ -249,7 +247,6 @@
                 "douglasgreen/config-setup": "dev-main",
                 "douglasgreen/php-linter": "dev-main",
                 "douglasgreen/utility": "dev-main",
-                "phpmd/phpmd": "^2.15",
                 "phpstan/phpstan": "^1.11",
                 "phpunit/phpunit": "^10.5",
                 "rector/rector": "^1.1",
@@ -300,7 +297,7 @@
                 "issues": "https://github.com/douglasgreen/optparser/issues",
                 "source": "https://github.com/douglasgreen/optparser/tree/main"
             },
-            "time": "2024-06-26T10:53:09+00:00"
+            "time": "2024-07-01T11:58:53+00:00"
         },
         {
             "name": "douglasgreen/php-linter",
@@ -308,12 +305,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglasgreen/php-linter.git",
-                "reference": "9f113c0ba5bc9d6d6c27583687802db2233c8984"
+                "reference": "3f89dec67533e891d4e4cb2929c8149758a3722c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglasgreen/php-linter/zipball/9f113c0ba5bc9d6d6c27583687802db2233c8984",
-                "reference": "9f113c0ba5bc9d6d6c27583687802db2233c8984",
+                "url": "https://api.github.com/repos/douglasgreen/php-linter/zipball/3f89dec67533e891d4e4cb2929c8149758a3722c",
+                "reference": "3f89dec67533e891d4e4cb2929c8149758a3722c",
                 "shasum": ""
             },
             "require": {
@@ -325,7 +322,6 @@
             "require-dev": {
                 "douglasgreen/config-setup": "dev-main",
                 "pdepend/pdepend": "^2.16",
-                "phpmd/phpmd": "^2.15",
                 "phpstan/phpstan": "^1.11",
                 "phpunit/phpunit": "^10.5",
                 "rector/rector": "^1.1",
@@ -376,7 +372,7 @@
                 "issues": "https://github.com/douglasgreen/php-linter/issues",
                 "source": "https://github.com/douglasgreen/php-linter/tree/main"
             },
-            "time": "2024-06-26T10:49:20+00:00"
+            "time": "2024-07-01T11:53:41+00:00"
         },
         {
             "name": "douglasgreen/utility",
@@ -384,12 +380,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/douglasgreen/utility.git",
-                "reference": "874fcb2c6e9a4e34c7c724224c385d44cf85b2b1"
+                "reference": "341c4eb6359c5a2b6419c42246c7e07b157029b0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/douglasgreen/utility/zipball/874fcb2c6e9a4e34c7c724224c385d44cf85b2b1",
-                "reference": "874fcb2c6e9a4e34c7c724224c385d44cf85b2b1",
+                "url": "https://api.github.com/repos/douglasgreen/utility/zipball/341c4eb6359c5a2b6419c42246c7e07b157029b0",
+                "reference": "341c4eb6359c5a2b6419c42246c7e07b157029b0",
                 "shasum": ""
             },
             "require": {
@@ -398,7 +394,6 @@
             "require-dev": {
                 "douglasgreen/config-setup": "dev-main",
                 "douglasgreen/php-linter": "dev-main",
-                "phpmd/phpmd": "^2.15",
                 "phpstan/phpstan": "^1.11",
                 "phpunit/phpunit": "^10.5",
                 "rector/rector": "^1.1",
@@ -439,20 +434,20 @@
                 "issues": "https://github.com/douglasgreen/utility/issues",
                 "source": "https://github.com/douglasgreen/utility/tree/main"
             },
-            "time": "2024-06-26T10:53:45+00:00"
+            "time": "2024-07-01T12:03:21+00:00"
         },
         {
             "name": "nette/neon",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/neon.git",
-                "reference": "0edcee11ca631af369180d9f3bc9615ea0cb2dfb"
+                "reference": "c8481c104431c8d94cc88424a1e21f47f8c93280"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/neon/zipball/0edcee11ca631af369180d9f3bc9615ea0cb2dfb",
-                "reference": "0edcee11ca631af369180d9f3bc9615ea0cb2dfb",
+                "url": "https://api.github.com/repos/nette/neon/zipball/c8481c104431c8d94cc88424a1e21f47f8c93280",
+                "reference": "c8481c104431c8d94cc88424a1e21f47f8c93280",
                 "shasum": ""
             },
             "require": {
@@ -505,9 +500,9 @@
             ],
             "support": {
                 "issues": "https://github.com/nette/neon/issues",
-                "source": "https://github.com/nette/neon/tree/v3.4.2"
+                "source": "https://github.com/nette/neon/tree/v3.4.3"
             },
-            "time": "2024-06-18T21:02:21+00:00"
+            "time": "2024-06-26T14:53:59+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -1008,16 +1003,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v7.1.1",
+            "version": "v7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "77c636dfd86c0b60c5d184b2fd2ddf8dd11c309c"
+                "reference": "6e108cded928bdafaf1da3fabe30dd5af20e36b9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/77c636dfd86c0b60c5d184b2fd2ddf8dd11c309c",
-                "reference": "77c636dfd86c0b60c5d184b2fd2ddf8dd11c309c",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/6e108cded928bdafaf1da3fabe30dd5af20e36b9",
+                "reference": "6e108cded928bdafaf1da3fabe30dd5af20e36b9",
                 "shasum": ""
             },
             "require": {
@@ -1068,7 +1063,7 @@
             "description": "Allows you to standardize and centralize the way objects are constructed in your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dependency-injection/tree/v7.1.1"
+                "source": "https://github.com/symfony/dependency-injection/tree/v7.1.2"
             },
             "funding": [
                 {
@@ -1084,7 +1079,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2024-06-28T10:03:55+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -1155,16 +1150,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v7.1.1",
+            "version": "v7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "802e87002f919296c9f606457d9fa327a0b3d6b2"
+                "reference": "92a91985250c251de9b947a14bb2c9390b1a562c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/802e87002f919296c9f606457d9fa327a0b3d6b2",
-                "reference": "802e87002f919296c9f606457d9fa327a0b3d6b2",
+                "url": "https://api.github.com/repos/symfony/filesystem/zipball/92a91985250c251de9b947a14bb2c9390b1a562c",
+                "reference": "92a91985250c251de9b947a14bb2c9390b1a562c",
                 "shasum": ""
             },
             "require": {
@@ -1201,7 +1196,7 @@
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v7.1.1"
+                "source": "https://github.com/symfony/filesystem/tree/v7.1.2"
             },
             "funding": [
                 {
@@ -1217,7 +1212,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2024-06-28T10:03:55+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -1463,16 +1458,16 @@
         },
         {
             "name": "symfony/var-exporter",
-            "version": "v7.1.1",
+            "version": "v7.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-exporter.git",
-                "reference": "db82c2b73b88734557cfc30e3270d83fa651b712"
+                "reference": "b80a669a2264609f07f1667f891dbfca25eba44c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/db82c2b73b88734557cfc30e3270d83fa651b712",
-                "reference": "db82c2b73b88734557cfc30e3270d83fa651b712",
+                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/b80a669a2264609f07f1667f891dbfca25eba44c",
+                "reference": "b80a669a2264609f07f1667f891dbfca25eba44c",
                 "shasum": ""
             },
             "require": {
@@ -1519,7 +1514,7 @@
                 "serialize"
             ],
             "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v7.1.1"
+                "source": "https://github.com/symfony/var-exporter/tree/v7.1.2"
             },
             "funding": [
                 {
@@ -1535,7 +1530,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T14:57:53+00:00"
+            "time": "2024-06-28T08:00:31+00:00"
         },
         {
             "name": "symplify/easy-coding-standard",
